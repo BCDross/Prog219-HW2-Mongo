@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Darren Ross - HW2 - To Do App</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h2>HW2 - To Dos</h2>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>Add a To Do</h3>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" /><br />
+        <label for="detail">Detail:</label>
+        <input type="text" id="detail" name="detail" /><br />
+        <label for="priority">Priority:</label>
+        <input type="text" id="priority" name="priority" /><br />
+        <label for="completed">Completed: Enter Yes or No</label>
+        <input type="text" id="completed" name="completed" /><br /><br />
+        <div>
+          <button type="button" id="submit">Add To Do</button>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h3>Existing To Dos</h3>
+        <div>
+          <button type="button" id="get">Show To Do List</button>
+        </div>
+        <div id="listDiv"></div>
+      </div>
+
+      <div class="grid-item">
+        <h3>Mark To-do Task Completed</h3>
+        <div>
+          Enter Title Here: <input type="text" id="toUpdate" />
+          <br />
+          <br />
+          <div>
+            <button type="button" id="update">To Do Completed</button><br />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h3>Delete To Do</h3>
+        <div>
+          Enter Title to delete here: <input type="text" id="deleteTitle" />
+          <br />
+          <br />
+          <button type="button" id="delete">Delete To Do</button>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascripts/index.js"></script>
+  </body>
+</html>
