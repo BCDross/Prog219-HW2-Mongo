@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     var oneToDo = new ToDo(tTitle, tDetail, tPriority, tCompleted);
-    ClientNotes.sort(compare);
     $.ajax({
       url: "/NewToDo",
       method: "POST",
@@ -51,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // AJAX get
     $.get("/ToDos", function (data, status) {
       ClientNotes = data; // put the returned server json data into our local array
+      ClientNotes.sort(compare);
       listDiv.appendChild(ul);
       ClientNotes.forEach(ProcessOneToDo); // build one li for each item in array
       function ProcessOneToDo(item, index) {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             idToUpdate = ClientNotes[i]._id;
         }
     }
-
+    
     if(idToUpdate != null){
         $.ajax({
             url: 'UpdateToDo/',
